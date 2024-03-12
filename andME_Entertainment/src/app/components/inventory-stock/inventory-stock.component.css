@@ -1,4 +1,102 @@
-.background_img {
-    margin-top: -120px;
-    margin-bottom: -10px;
+.inventory-stock {
+    background-image: url("/assets/assests/Images/inventory-stock-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.main {
+    width: 90vw;
+    height: 77vh;
+    margin-top: 5vh;
+}
+
+.title-block {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    background: rgba(56, 3, 86, 0.50);
+    box-shadow: 5px -2px 40px 0px rgba(26, 26, 26, 0.50);
+    border-radius: 25px;
+    width: 57%;
+    height: 84%;
+    display: flex;
+    align-items: flex-start; /* Adjust alignment */
+    margin-top: 20px;
+    float: left;
+    padding: 3vh;
+    flex-wrap: wrap;
+    overflow-y: auto; /* Enable vertical scrolling */
+    justify-content: space-between;
+}
+
+
+
+.right {
+    background: rgba(56, 3, 86, 0.50);
+    box-shadow: 5px -2px 40px 0px rgba(26, 26, 26, 0.50);
+    border-radius: 25px;
+    width: 38%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 1.5vw;
+    float: left;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 36px;
+    margin-left: 20px;
+    color: #F1F1F1;
+}
+
+
+.dummy-background {
+    width: calc((100% - 17vh) / 6); /* Calculate width dynamically to fit 7 items per row */
+    height: 18vh;
+    border-radius: 10px;
+    background: rgba(56, 3, 86, 0.75);
+    box-shadow: 5px -2px 40px 0px rgba(26, 26, 26, 0.50);
+    margin-bottom: 2vh;
+    margin-right: 2vh;
+}
+
+/* .card {
+    width: 30vw;
+    height: 65vh;
+    padding: 20px;
+    background-color:rgba(56, 3, 86, 0.7);
+    border-radius: 25px;
+    box-shadow: 5px -2px 40px 0px rgba(26, 26, 26, 0.50);
+    margin-left: 55vw;
+    color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+} */
+
+.bottom-nav-background {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(transparent, #380356);
+    position: absolute;
+    bottom: 0;
+}
+
+/* 
+
+
+.subtitle{
+    font-weight: 400;
+    font-size: 24px;
+} */
