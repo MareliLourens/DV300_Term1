@@ -1,0 +1,25 @@
+.nav-background{
+    height: 112px;
+    width: 100%;
+    background: linear-gradient(#380356, transparent);
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 56px;
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+
+.nav-background .nav-text {
+    font-weight: 400;
+    text-decoration: none;
+    color: #F1F1F1;
+    font-size: 24px;
+}
+
+.nav-right{
+    position: absolute;
+    right: 3vw;
+}
