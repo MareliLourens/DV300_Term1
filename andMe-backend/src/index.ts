@@ -6,6 +6,9 @@ import { Inventory_One } from './entity/inventory_one';
 import { Craftable } from './entity/craftable';
 import { User } from './entity/users';
 import inventoryoneRouter from './route/inventoryoneroute';
+import inventorytwoRouter from './route/inventorytworoute';
+import inventorythreeRouter from './route/inventorythreeroute';
+import craftableRouter from './route/craftableroute';
 
 const cors = require('cors');
 
@@ -21,15 +24,13 @@ app.get('/', (req, res) => {
   res.send('Hello, Marine!');
 });
 
-// app.get('/crafts', async (req, res) => {
-//   const craft = await appDataSource.getRepository(Craftable).find()
-//   // .manager.find(Craftable)
-
-//   console.log(craft)
-//   res.send(craft)
-// })
-
 app.use('/inventory', inventoryoneRouter);
+
+app.use('/inventorytwo', inventorytwoRouter);
+
+app.use('/inventorythree', inventorythreeRouter);
+
+app.use('/craftable', craftableRouter);
 
 app.listen(process.env.PORT, () => {
     console.log('Server is listening on port 3000');

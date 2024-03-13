@@ -8,9 +8,9 @@ const AppDataSource = new DataSource(
         "username": "postgres",
         "password": "2024",
         "database": "and_me_entertainement",
-        "entities": ["src/entity/*.ts"],
+        "entities": ["src/entity/**"],
         "logging": true,
-        "synchronize": true
+        "synchronize": false
     }
 )
 
