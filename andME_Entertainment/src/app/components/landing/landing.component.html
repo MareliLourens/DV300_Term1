@@ -1,1 +1,11 @@
-<p>landing works!</p>
+<video autoplay muted id="myVideo" style="margin-top: -120px;">
+    <source src="/assets/assests/Images/landing-video.mp4" type="video/mp4">
+</video>
+
+<script>
+    var video = document.getElementById("myVideo");
+
+    video.addEventListener('ended', function() {
+        this.pause();
+    });
+</script>
