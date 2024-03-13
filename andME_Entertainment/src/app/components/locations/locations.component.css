@@ -1,0 +1,74 @@
+.background_img {
+    margin-top: -120px;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+.box {
+    margin-top: -620px;
+    margin-left: 185px;
+}
+
+.example-card {
+    width: 300px;
+    height: 560px;
+    padding: 18px;
+    background-color:rgba(56, 3, 86, 0.7);
+    color: white;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.example-card1 {
+    width: 300px;
+    height: 560px;
+    padding: 18px;
+    background-color:rgba(56, 3, 86, 0.7);
+    color: white;
+    margin-top: -560px;
+    margin-left: 380px;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.example-card2 {
+    width: 300px;
+    height: 560px;
+    padding: 18px;
+    background-color:rgba(56, 3, 86, 0.7);
+    color: white;
+    margin-top: -560px;
+    margin-left: 760px;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.loc {
+    width: 240px;
+}
+
+.title {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 29pt;
+}
+
+.body {
+    text-align: center;
+}
+
+.subtitle {
+    color: white;
+    font-size: 15pt;
+}
+
+.button {
+    background-color: #9E04A0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17pt;
+    font-weight: 300;
+    height: 50px;
+    width: 240px;
+}

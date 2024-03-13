@@ -17,9 +17,21 @@
     text-decoration: none;
     color: #F1F1F1;
     font-size: 24px;
+    margin-right: 20px;
 }
 
 .nav-right{
     position: absolute;
     right: 3vw;
+}
+
+.top{
+    position:relative;
+}
+
+.footer-background{
+    height: 112px;
+    width: 100%;
+    background: linear-gradient(#380356, transparent);
+    align-items: center;
 }

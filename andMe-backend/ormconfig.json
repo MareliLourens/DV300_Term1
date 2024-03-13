@@ -1,0 +1,10 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "2024",
+    "database": "and_me_entertainement",
+    "entities": ["src/entity/*"],
+    "synchronize": true
+}
