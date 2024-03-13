@@ -1,6 +1,19 @@
-.background_img {
-    margin-top: -120px;
-    margin-bottom: -10px;
+.inventory-stock {
+    background-image: url("/assets/assests/Images/Authentication_BG.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 90vw;
+    height: 77vh;
+    margin-top: 5vh;
 }
 
 .example-card {
@@ -9,7 +22,7 @@
     padding: 18px;
     background-color:rgba(56, 3, 86, 0.7);
     color: white;
-    margin-top: -610px;
+    margin-top: 0px;
     margin-left: 220px
 }
 
