@@ -1,25 +1,42 @@
-.background_img {
-    margin-top: -120px;
-    margin-bottom: -10px;
+.about-us{
+    background-image: url("/assets/assests/Images/about-us-background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin-top: -112px;
+    display: flex;
+    align-items: center;
 }
 
-.example-card {
-    width: 500px;
-    height: 540px;
+.card {
+    width: 30vw;
+    height: 65vh;
     padding: 20px;
     background-color:rgba(56, 3, 86, 0.7);
-    color: white;
-    margin-top: -610px;
-    margin-left: 820px;
+    border-radius: 25px;
+    box-shadow: 5px -2px 40px 0px rgba(26, 26, 26, 0.50);
+    margin-left: 55vw;
+    color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-nav-background{
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(transparent, #380356);
+    position: absolute;
+    bottom: 0;
 }
 
 .title {
-    font-weight: bold;
-    font-size: 37pt;
-    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 5vh;
 }
 
 .subtitle{
-    font-size: 20pt;
-    color: white;
+    font-weight: 400;
+    font-size: 24px;
 }
