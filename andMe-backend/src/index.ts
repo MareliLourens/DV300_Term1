@@ -20,9 +20,9 @@ dotenv.config()
 
 const appDataSource = AppDataSource;
 
-app.get('/', (req, res) => {
-  res.send('Hello, Marine!');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello, Marine!');
+// });
 
 app.use('/inventory', inventoryoneRouter);
 
@@ -30,7 +30,7 @@ app.use('/inventorytwo', inventorytwoRouter);
 
 app.use('/inventorythree', inventorythreeRouter);
 
-app.use('/craftable', craftableRouter);
+app.use('/craftables', craftableRouter);
 
 app.listen(process.env.PORT, () => {
     console.log('Server is listening on port 3000');

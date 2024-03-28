@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from "typeorm";
+import { Ingredients } from "./ingredients";
 
 @Entity()
 export class Inventory_Two {
@@ -19,4 +20,7 @@ export class Inventory_Two {
 
     @Column()
     image!: string;
+
+    @OneToMany(() => Ingredients, ingredients => ingredients.inventory)
+    public inventoryToCraftablestwo?: Ingredients[];
 }
