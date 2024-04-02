@@ -9,6 +9,8 @@ import inventoryoneRouter from './route/inventoryoneroute';
 import inventorytwoRouter from './route/inventorytworoute';
 import inventorythreeRouter from './route/inventorythreeroute';
 import craftableRouter from './route/craftableroute';
+import craftableRouterTwo from './route/craftableroute_2';
+import craftableRouterThree from './route/craftableroute_3';
 
 const cors = require('cors');
 
@@ -31,6 +33,10 @@ app.use('/inventorytwo', inventorytwoRouter);
 app.use('/inventorythree', inventorythreeRouter);
 
 app.use('/craftables', craftableRouter);
+
+app.use('/craftablestwo', craftableRouterTwo);
+
+app.use('/craftablesthree', craftableRouterThree);
 
 app.listen(process.env.PORT, () => {
     console.log('Server is listening on port 3000');

@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from "typeorm";
 import { Ingredients } from "./ingredients";
+import { Ingredients_Three } from "./ingredients_three";
 
 @Entity()
 export class Inventory_Three {
@@ -21,6 +22,6 @@ export class Inventory_Three {
     @Column()
     image!: string
 
-    @OneToMany(() => Ingredients, ingredients => ingredients.inventory)
-    public inventoryToCraftablesthree?: Ingredients[];
+    @OneToMany(() => Ingredients_Three, ingredientsthree => ingredientsthree.inventorythree)
+    public inventoryToCraftablesthree?: Ingredients_Three[];
 }
