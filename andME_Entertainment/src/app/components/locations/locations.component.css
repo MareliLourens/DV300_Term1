@@ -10,15 +10,12 @@
     justify-content: center;
 }
 
-/* .box {
-    margin-top: 0px;
-    margin-left: 185px;
-} */
-
 .main {
     width: 90vw;
     height: 77vh;
     margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
 }
 
 .example-card {
