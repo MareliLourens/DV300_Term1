@@ -4,14 +4,17 @@
     background-position: center;
     height: 100%;
     width: 100%;
-    margin-top: -112px;
+    margin-top: -100px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
+
 
 .card {
     width: 30vw;
-    height: 65vh;
+    height: 75vh;
     padding: 20px;
     background-color:rgba(56, 3, 86, 0.7);
     border-radius: 25px;
@@ -20,6 +23,7 @@
     color: #F1F1F1;
     display: flex;
     justify-content: center;
+    margin-top: 5vh;
 }
 
 .bottom-nav-background{
