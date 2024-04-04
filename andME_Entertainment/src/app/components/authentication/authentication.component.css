@@ -50,7 +50,7 @@
     text-decoration: underline;
     font-size: 10pt;
     color: white;
-    float: right;
+    margin-left: 200px;
     width: 150px;
     text-align-last: right;
 }
