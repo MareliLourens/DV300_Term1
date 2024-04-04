@@ -17,13 +17,17 @@
 }
 
 .example-card {
-    width: 400px;
-    height: 540px;
-    padding: 18px;
+    width: 30vw;
+    height: 75vh;
+    padding: 20px;
     background-color:rgba(56, 3, 86, 0.7);
-    color: white;
-    margin-top: 0px;
-    margin-left: 220px
+    border-radius: 25px;
+    box-shadow: 5px -2px 40px 0px rgba(26, 26, 26, 0.50);
+    margin-left: 220px;
+    color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
 }
 
 .title {
@@ -46,7 +50,9 @@
     text-decoration: underline;
     font-size: 10pt;
     color: white;
-    margin-left: 200px;
+    float: right;
+    width: 150px;
+    text-align-last: right;
 }
 
 .subtitle3{
@@ -56,8 +62,20 @@
 }
 
 .box {
-    width: 330px;
+    width: 400px;
     margin-bottom: -15px;
+}
+
+.Phone_Codes{
+    height: 6vh;
+}
+
+.Phone_Num{
+    height: 4.2vh;
+}
+
+.pin{
+    height: 4vh;
 }
 
 .Phone_Codes {
@@ -74,9 +92,9 @@
     border: 2px #380356 solid ;
     color: #380356;
     font-size: 14pt;
-    padding: 5px;
-    width: 150px;
-    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
 }
 
 .Phone_Sub {
@@ -86,6 +104,7 @@
     color: white;
     font-size: 10pt;
     padding: 7px;
+    margin-left: -86px;
 }
 
 .pin {
@@ -94,6 +113,7 @@
     border-radius: 5px;
     font-size: 15pt;
     padding: 5px;
+    width: 95%;
 }
 
 .login_but {
