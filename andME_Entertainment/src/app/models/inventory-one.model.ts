@@ -1,6 +1,6 @@
-export interface InventoryOne {
+export interface Inventory_One {
     id?: number;
     name: string;
-    amount_avaible: number;
     image: string;
+    amount_avaible: number;
 }
