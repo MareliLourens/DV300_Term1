@@ -21,5 +21,6 @@ export class InventoryItemComponent {
       name: "BE",
       image: "assets/assests/BE (Deluxe Edition)/Outer_Box.png",
       amount_avaible: 0,
+      main_category: "Album BE",
   }
 }

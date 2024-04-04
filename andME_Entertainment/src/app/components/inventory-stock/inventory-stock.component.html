@@ -9,34 +9,39 @@
             <h1 class="title">South Africa - Inventory Stock</h1>
         </div>
         <div class="left">
-            <app-inventory-item *ngFor="let item of inventoryList" [item]="item" class="card"></app-inventory-item>
+            <app-inventory-item *ngFor="let item of inventory" [item]="item" class="card" (click)="setSelectedItem(item)"></app-inventory-item>
         </div>
         <div class="right">
-            <h1 class="title-right">Item Name</h1>
-            <div class="dummy-background-big">
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="150px">
-            </div>
-            <div style="height: 3.5vh; width: 15vw; display: flex; margin-bottom: 1vh;">
-                <img class="flag" src="assets/assests/Images/South_African_Flag.svg">
-                <h3 class="location">South Africa</h3>
-            </div>
-            <a style="font-weight: 400;
-            font-size: 20px;
-            color: #F1F1F1;
-            margin: 0;">Description Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor
-                incididunt ut labore </a>
-                <div class="dropdown-box">
-                    <select class="dropdown">
-                        <option>Select Location</option>
-                        <option>South Korea</option>
-                        <option>Japan</option>
-                    </select>
-                    <img src="/assets/assests/Images/down-arrow.svg" class="arrow">
+            @if(selectedInventory) {
+                <h1 class="title-right">{{selectedInventory.name}} - <b class="category">{{selectedInventory.main_category}}</b></h1>
+                <div class="dummy-background-big">
+                    <img [src]="selectedInventory.image" height="150px">
                 </div>
-                <div class="bottom-right">
-                <input type="number" id="amount" min="1" max="100" />
-                <button type="submit" class="update">Update</button>
-            </div>
+                <div style="height: 3.5vh; width: 15vw; display: flex; margin-bottom: 1vh;">
+                    <img class="flag" src="assets/assests/Images/South_African_Flag.svg">
+                    <h3 class="location">South Africa</h3>
+                </div>
+                <a style="font-weight: 400;
+                font-size: 20px;
+                color: #F1F1F1;
+                margin: 0;">Description Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor
+                    incididunt ut labore </a>
+                    <div class="dropdown-box">
+                        <select class="dropdown">
+                            <option>Select Location</option>
+                            <option>South Korea</option>
+                            <option>Japan</option>
+                        </select>
+                        <img src="/assets/assests/Images/down-arrow.svg" class="arrow">
+                    </div>
+                    <p class="amount">{{selectedInventory.amount_avaible}}</p>
+                    <div class="bottom-right">
+                        <input type="number" id="amount" min="1" max="100" [value]="selectedInventory.amount_avaible" (change)="updateAmount($event)"/>
+                        <button type="submit" class="update" (click)="saveAmount()">Update</button>
+                    </div>
+            }
+            
+            
         </div>
 
     </div>
