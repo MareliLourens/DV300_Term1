@@ -6,49 +6,10 @@
     <div class="main">
         <div class="title-block">
             <img src="assets/assests/Images/back-arrow.png" width="50px">
-            <h1 class="title">Inventory Stock</h1>
+            <h1 class="title">South Africa - Inventory Stock</h1>
         </div>
         <div class="left">
-            <div class="dummy-background">
-                <div class="amount-background">5</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background">
-                <div class="amount-background">5</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background">
-                <div class="amount-background">5</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background">
-                <div class="amount-background">5</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background">
-                <div class="amount-background">5</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
+            <app-inventory-item *ngFor="let item of inventoryList" [item]="item" class="card"></app-inventory-item>
         </div>
         <div class="right">
             <h1 class="title-right">Item Name</h1>
