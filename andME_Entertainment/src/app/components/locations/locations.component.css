@@ -10,6 +10,11 @@
     justify-content: center;
 }
 
+a{
+    text-decoration: none;
+    color: #F1F1F1;
+}
+
 .main {
     width: 90vw;
     height: 77vh;
