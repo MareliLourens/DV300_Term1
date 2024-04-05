@@ -4,7 +4,7 @@ const AppDataSource = new DataSource(
     {
         "type": "postgres",
         "host": "localhost",
-        "port": 5432,
+        "port": 6131,
         "username": "postgres",
         "password": "2024",
         "database": "and_me_entertainement",
