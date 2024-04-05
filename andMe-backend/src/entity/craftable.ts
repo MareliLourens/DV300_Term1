@@ -6,22 +6,22 @@ import { Ingredients_Three } from "./ingredients_three";
 @Entity()
 export class Craftable {
     @PrimaryGeneratedColumn()
-    id!: number 
+    id!: number;
 
     @Column()
-    name!: string 
+    name!: string;
 
     @Column()
-    amount_avaible!: number 
+    amount_avaible!: number;
 
     @Column()
-    amount_crafted!: string
+    amount_crafted!: number;
 
     @Column()
-    category!: string
+    category!: string;
 
     @Column()
-    image!: string
+    image!: string;
 
     @OneToMany(() => Ingredients, ingredients => ingredients.craftable)
     ingredients?: Ingredients[]

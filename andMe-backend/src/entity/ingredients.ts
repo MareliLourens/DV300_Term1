@@ -18,5 +18,5 @@ export class Ingredients {
     public inventory?: Inventory_One
 
     @ManyToOne(() => Craftable, (craftable) => craftable.ingredients)
-    public craftable?: Craftable
+    public craftable!: Craftable
 }

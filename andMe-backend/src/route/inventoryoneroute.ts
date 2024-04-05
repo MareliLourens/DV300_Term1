@@ -15,6 +15,7 @@ inventoryoneRouter.get("/", async (req, res) => {
         const items = await appDataSource.getRepository(Inventory_One).find()
 
         res.json(items)
+        console.log(items)
 
     } catch (error) {
         console.error("Error during Data Source initialization", error)

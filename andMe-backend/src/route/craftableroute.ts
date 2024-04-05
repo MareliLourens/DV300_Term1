@@ -46,8 +46,9 @@ craftableRouter.put("/:id/craft", async (req, res) => {
   
         // save our recipe amount and return it
         var newRecipeData = await appDataSource.getRepository(Craftable).save(recipeRequest);
+        console.log(newRecipeData)
         return res.json(newRecipeData);
-        
+
       }
   
     } catch (error) {
@@ -68,6 +69,8 @@ craftableRouter.put("/:id/craft", async (req, res) => {
           throw new Error(`Inventory item with ID ${ingredient.inventoryId} not found`);
         }
         inventoryItem!.amount_avaible = ingredient.inventory!.amount_avaible - ingredient.amount;
+
+        console.log(inventoryItem!)
   
         await appDataSource.getRepository(Inventory_One).save(inventoryItem!);
       }
