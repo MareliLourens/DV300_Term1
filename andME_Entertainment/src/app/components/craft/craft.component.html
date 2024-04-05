@@ -15,7 +15,7 @@
                     <img [src]="craftable.image" height="120px">
                 </div>
             }
-        </div>
+        </div> 
         @if(selectedCraftable) {
             <div class="right">
                 <h1 class="title-right">{{selectedCraftable.name}}</h1>
@@ -23,12 +23,19 @@
                 <div style="width: 100%;">
                     <div class="bottom">
                         <h1 class="title-bottom">Crafting Materials</h1>
-                        <button type="submit" class="bottom-button">Craft</button>
+                        <h1 class="subtitle-bottom">{{selectedCraftable.amount_crafted}}</h1>
+                         @if (selectedCraftable.isCraftable) {
+                            <button type="submit" class="bottom-button" (click)="craftNewRecipe(selectedCraftable)">
+                                Craft
+                            </button>
+                        } @else {
+                            <p style="color: red;">Not enough ingredients available</p>
+                        }
                     </div>
                     <div class="bottom-item-background">
                         @for (ingredient of selectedCraftable.ingredients; track $index) {
                             <div class="dummy-background-bottom">
-                                <div class="amount-background" [style]="ingredient.inventory.amount_avaible >= ingredient.amount ? 'color: white' : 'color: red'">{{ingredient.inventory.name}}</div>
+                                <div class="amount-background" [style]="ingredient.inventory.amount_avaible >= ingredient.amount ? 'color: white' : 'color: red'"><b>{{ingredient.inventory.name}}</b> - {{ingredient.inventory.amount_avaible}}</div>
                                 <img [src]="ingredient.inventory.image" height="100px">
                             </div>
                             <img src="assets/assests/Images/plus.png" class="img">

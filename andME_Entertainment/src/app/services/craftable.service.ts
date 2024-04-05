@@ -17,8 +17,10 @@ export class CraftableService {
   }
 
   //Call the craft Functionality
-  craftCraftable(recipe: Craftable): Observable<Craftable> {
-    var craftUrl = this.baseUrl + "/" + recipe.id + "/craft"
-    return this.http.put<Craftable>(craftUrl, {amount: recipe.amount_crafted+1, ingredients: recipe.ingredients})
+  craftCraftable(craftable: Craftable): Observable<Craftable> {
+    var craftUrl = this.baseUrl + "/" + craftable.id + "/craft"
+    return this.http.put<Craftable>(craftUrl, {amount: craftable!.amount_crafted+1, ingredients: craftable.ingredients})
   }
+
+
 }

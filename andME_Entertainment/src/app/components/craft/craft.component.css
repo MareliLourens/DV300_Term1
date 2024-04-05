@@ -102,8 +102,8 @@
     justify-content: center;
     color: #F1F1F1;
     font-weight: 400;
+    font-size: 10pt;
 }
-
 
 .bottom {
     height: 6vh;
@@ -112,9 +112,8 @@
     border-radius: 10px;
     background: #380356;
     box-shadow: 5px -2px 40px 0px rgba(26, 26, 26, 0.50);
-    align-items: center;
     justify-content: space-between;
-    
+    align-items: center;
 }
 
 .title-bottom {
@@ -123,7 +122,16 @@
     color: #F1F1F1;
     margin: 0;
     display: flex;
-    align-items: center;
+    align-items: left;
+    padding: 1vw;
+}
+
+.subtitle-bottom {
+    font-weight: 800;
+    font-size: 16px;
+    color: #F1F1F1;
+    margin: 0;
+    display: flex;
     padding: 1vw;
 }
 
