@@ -6,80 +6,37 @@
     <div class="main">
         <div class="title-block">
             <img src="assets/assests/Images/back-arrow.png" width="50px">
-            <h1 class="title">Craft</h1>
+            <h1 class="title">South Africa - Craft</h1>
         </div>
         <div class="left">
-            <div class="dummy-background">
-                <div class="amount-background">Item Name</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background">
-                <div class="amount-background">Item Name</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background">
-                <div class="amount-background">Item Name</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background">
-                <div class="amount-background">Item Name</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background">
-                <div class="amount-background">Item Name</div>
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-            </div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
-            <div class="dummy-background"></div>
+            @for(craftable of craftable; track $index){
+                <div class="dummy-background" (click)="setSelectedRicipe(craftable)">
+                    <div class="amount-background">{{craftable.name}}</div>
+                    <img [src]="craftable.image" height="120px">
+                </div>
+            }
         </div>
-        <div class="right">
-            <h1 class="title-right">Item Name</h1>
-            <!-- <div class="dummy-background-big">
-                <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="150px">
-            </div> -->
-            <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="150px">
-            <div style="width: 100%;">
-            <div class="bottom">
-                <h1 class="title-bottom">Crafting Materials</h1>
-                <button type="submit" class="bottom-button">Craft</button>
-            </div>
-            <div class="bottom-item-background">
-                <div class="dummy-background-bottom">
-                    <div class="amount-background">Item Name</div>
-                    <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-                </div>
-                <img src="assets/assests/Images\plus.png">
-                <div class="dummy-background-bottom">
-                    <div class="amount-background">Item Name</div>
-                    <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
-                </div>
-                <img src="assets/assests/Images\plus.png">
-                <div class="dummy-background-bottom">
-                    <div class="amount-background">Item Name</div>
-                    <img src="assets/assests/BE (Deluxe Edition)\Outer_Box.png" height="120px">
+        @if(selectedCraftable) {
+            <div class="right">
+                <h1 class="title-right">{{selectedCraftable.name}}</h1>
+                <img [src]="selectedCraftable.image" height="170px">
+                <div style="width: 100%;">
+                    <div class="bottom">
+                        <h1 class="title-bottom">Crafting Materials</h1>
+                        <button type="submit" class="bottom-button">Craft</button>
+                    </div>
+                    <div class="bottom-item-background">
+                        @for (ingredient of selectedCraftable.ingredients; track $index) {
+                            <div class="dummy-background-bottom">
+                                <div class="amount-background" [style]="ingredient.inventory.amount_avaible >= ingredient.amount ? 'color: white' : 'color: red'">{{ingredient.inventory.name}}</div>
+                                <img [src]="ingredient.inventory.image" height="100px">
+                            </div>
+                            <img src="assets/assests/Images/plus.png" class="img">
+                        } 
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-
+        }
     </div>
     <!-- <mat-card class="card">
         <mat-card-header class="title"> 

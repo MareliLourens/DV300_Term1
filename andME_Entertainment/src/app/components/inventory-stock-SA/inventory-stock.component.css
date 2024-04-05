@@ -89,6 +89,13 @@
     margin: 0;
 }
 
+.category {
+    font-weight: 0;
+    font-size: 20px;
+    color: #F1F1F1;
+    margin: 0;
+}
+
 .dummy-background-big {
     width: 100%;
     height: 75vh;
@@ -165,6 +172,11 @@
     justify-content: space-between;
 }
 
+.amount {
+    font-size: 0px;
+    color: none;
+}
+
 #amount{
     width: 15vw;
     height: 100%;
@@ -207,7 +219,7 @@
 } */
 
 .bottom-nav-background {
-    height: 100px;
+    height: 50px;
     width: 100%;
     background: linear-gradient(transparent, #380356);
     position: absolute;
