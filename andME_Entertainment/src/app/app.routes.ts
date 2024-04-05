@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { LandingComponent } from './components/landing/landing.component';
-import { InventoryStockComponent } from './components/inventory-stock/inventory-stock.component';
+import { InventoryStockComponentSA } from './components/inventory-stock-SA/inventory-stock.component';
+import { InventoryStockComponentSK } from './components/inventory-stock-SK/inventory-stock.component';
+import { InventoryStockComponentJP } from './components/inventory-stock-JP/inventory-stock.component';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { LocationsComponent } from './components/locations/locations.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
@@ -11,7 +13,9 @@ export const routes: Routes = [
     { path: 'authentication', component: AuthenticationComponent },
     { path: 'locations', component: LocationsComponent },
     { path: 'about-us', component: AboutUsComponent },
-    { path: 'inventory-stock', component: InventoryStockComponent },
+    { path: 'inventory-stock-SA', component: InventoryStockComponentSA },
+    { path: 'inventory-stock-SK', component: InventoryStockComponentSK },
+    { path: 'inventory-stock-JP', component: InventoryStockComponentJP },
     { path: 'craft', component: CraftComponent },
     
 ];

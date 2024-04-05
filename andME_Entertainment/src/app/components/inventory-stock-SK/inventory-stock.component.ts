@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './inventory-stock.component.html',
   styleUrl: './inventory-stock.component.css'
 })
-export class InventoryStockComponent {
+export class InventoryStockComponentSK {
   constructor(private service: InventoryOneService){}
 
   inventory: Inventory_One[] = [
