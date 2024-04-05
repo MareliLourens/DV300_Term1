@@ -3,4 +3,5 @@ export interface Inventory_One {
     name: string;
     image: string;
     amount_avaible: number;
+    main_category: string;
 }

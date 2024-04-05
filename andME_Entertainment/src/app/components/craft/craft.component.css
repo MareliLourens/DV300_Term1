@@ -84,7 +84,7 @@
 
 .title-right {
     font-weight: 800;
-    font-size: 36px;
+    font-size: 26px;
     color: #F1F1F1;
     margin: 0;
 }
@@ -151,8 +151,12 @@
     background: rgba(56, 3, 86, 0.50);
     box-shadow: 5px -2px 40px 0px rgba(26, 26, 26, 0.50);
     display: flex;
+    padding-top: 12px;
     align-items: center;
-    justify-content: space-evenly;
+    /* flex-direction: row; */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    justify-content: space-between;
 }
 
 #amount {
@@ -177,13 +181,15 @@
     margin-bottom: 2vh;
     margin-right: 2vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column-reverse;
     justify-content: space-between;
     padding: 1vh;
 }
 
-
+.img {
+    height: 30px;
+}
 
 /* .card {
     width: 30vw;

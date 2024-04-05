@@ -18,4 +18,8 @@ export class InventoryOneService {
      return this.http.get<Inventory_One[]>(this.baseUrl)
    }
 
+  //gupdate inventory amount
+  updateInventoryAmmount(id: number, newAmount: number): Observable<Inventory_One> {
+    return this.http.put<Inventory_One>(`${this.baseUrl}/${id}`, {amount: newAmount})
+  }
 }
