@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
 import { InventoryOneService } from '../../../services/inventory-one.service';
 import { Inventory_One } from '../../../models/inventory-one.model';
 
@@ -12,9 +11,9 @@ import { Inventory_One } from '../../../models/inventory-one.model';
 })
 export class InventoryItemComponent {
 
-    constructor(private service: InventoryOneService) {}
+  constructor(private service: InventoryOneService) {}
 
-    //Behaviour and variables
+  //Behaviour and variables
   @Input() item: Inventory_One = 
     {
       id: 0,

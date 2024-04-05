@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { LandingComponent } from './components/landing/landing.component';
 import { InventoryStockComponentSA } from './components/inventory-stock-SA/inventory-stock.component';
-import { InventoryStockComponentSK } from './components/inventory-stock-SK/inventory-stock.component';
-import { InventoryStockComponentJP } from './components/inventory-stock-JP/inventory-stock.component';
+import { InventoryStockComponentSK } from './components/inventory-stock-SK/inventory-stock-2.component';
+import { InventoryStockComponentJP } from './components/inventory-stock-JP/inventory-stock-3.component';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { LocationsComponent } from './components/locations/locations.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
