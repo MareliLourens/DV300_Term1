@@ -4,7 +4,7 @@ import { DataSource } from 'typeorm';
 import AppDataSource from './dataSource';
 import { Inventory_One } from './entity/inventory_one';
 import { Craftable } from './entity/craftable';
-import { User } from './entity/users';
+import userRouter from "./route/userRoute";
 import inventoryoneRouter from './route/inventoryoneroute';
 import inventorytwoRouter from './route/inventorytworoute';
 import inventorythreeRouter from './route/inventorythreeroute';
@@ -37,6 +37,8 @@ app.use('/craftables', craftableRouter);
 app.use('/craftablestwo', craftableRouterTwo);
 
 app.use('/craftablesthree', craftableRouterThree);
+
+app.use('/users', userRouter);
 
 app.listen(process.env.PORT, () => {
     console.log('Server is listening on port 3000');
