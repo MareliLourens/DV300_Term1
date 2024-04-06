@@ -9,7 +9,7 @@ import { Craftable } from '../../models/craftable.model';
   templateUrl: './craft.component.html',
   styleUrl: './craft.component.css'
 })
-export class CraftComponent {
+export class CraftComponentSA {
 
   constructor (private service: CraftableService) {}
 

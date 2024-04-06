@@ -1,0 +1,62 @@
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<div class="inventory-stock">
+    <div class="main">
+        <div class="title-block">
+            <img src="assets/assests/Images/back-arrow.png" width="50px">
+            <h1 class="title">South Africa - Craft</h1>
+        </div>
+        <div class="left">
+            @for(craftable of craftable; track $index){
+                <div class="dummy-background" (click)="setSelectedRicipe(craftable)">
+                    <div class="amount-background">{{craftable.name}}</div>
+                    <img [src]="craftable.image" height="120px">
+                </div>
+            }
+        </div> 
+        @if(selectedCraftable) {
+            <div class="right">
+                <h1 class="title-right">{{selectedCraftable.name}}</h1>
+                <img [src]="selectedCraftable.image" height="170px">
+                <div style="width: 100%;">
+                    <div class="bottom">
+                        <h1 class="title-bottom">Crafting Materials</h1>
+                        <h1 class="subtitle-bottom">{{selectedCraftable.amount_crafted}}</h1>
+                         @if (selectedCraftable.isCraftable) {
+                            <button type="submit" class="bottom-button" (click)="craftNewRecipe(selectedCraftable)">
+                                Craft
+                            </button>
+                        } @else {
+                            <p style="color: red;">Not enough ingredients available</p>
+                        }
+                    </div>
+                    <div class="bottom-item-background">
+                        @for (ingredient of selectedCraftable.ingredients; track $index) {
+                            <div class="dummy-background-bottom">
+                                <div class="amount-background" [style]="ingredient.inventory.amount_avaible >= ingredient.amount ? 'color: white' : 'color: red'"><b>{{ingredient.inventory.name}}</b> - {{ingredient.inventory.amount_avaible}}</div>
+                                <img [src]="ingredient.inventory.image" height="100px">
+                            </div>
+                            <img src="assets/assests/Images/plus.png" class="img">
+                        } 
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <!-- <mat-card class="card">
+        <mat-card-header class="title"> 
+            About Us
+        </mat-card-header>
+        <mat-card-content class="subtitle">
+            Welcome to &ME Entertainment, your hub for cutting-edge K-pop albums produced across South Africa, 
+            South Korea, and Japan. Our dynamic team of artists and producers creates a unique blend that celebrates 
+            diversity and innovation in the heart of K-pop. Join us on this global musical journey with &ME 
+            Entertainment – where K-pop excellence knows no borders.
+        </mat-card-content>
+    </mat-card> -->
+</div>
+
+<div class="bottom-nav-background">
+</div>

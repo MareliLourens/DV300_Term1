@@ -6,7 +6,9 @@ import { InventoryStockComponentJP } from './components/inventory-stock-JP/inven
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { LocationsComponent } from './components/locations/locations.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { CraftComponent } from './components/craft/craft.component';
+import { CraftComponentSA } from './components/craft-SA/craft.component';
+import { CraftComponentSK } from './components/craft-SK/craft.component';
+import { CraftComponentJP } from './components/craft-JP/craft.component';
 
 export const routes: Routes = [
     { path: 'landing', component: LandingComponent },
@@ -16,6 +18,8 @@ export const routes: Routes = [
     { path: 'inventory-stock-SA', component: InventoryStockComponentSA },
     { path: 'inventory-stock-SK', component: InventoryStockComponentSK },
     { path: 'inventory-stock-JP', component: InventoryStockComponentJP },
-    { path: 'craft', component: CraftComponent },
+    { path: 'craftSA', component: CraftComponentSA },
+    { path: 'craftSK', component: CraftComponentSK },
+    { path: 'craftJP', component: CraftComponentJP },
     
 ];
