@@ -5,9 +5,11 @@
 <div class="inventory-stock">
     <div class="main">
         <div class="title-block">
+            <div style="width: 50vw; display: flex; align-items: center;">
             <a href="/locations"><img src="assets/assests/Images/back-arrow.png" width="50px"></a>
             <h1 class="title">South Africa - Inventory Stock</h1>
-            <button class="button"><a href="/craft-SA">View Location</a></button>
+            </div>
+            <button class="button"><a href="/craftSA">Craft</a></button>
         </div>
         <div class="left">
             <app-inventory-item *ngFor="let item of inventory" [item]="item" class="card" (click)="setSelectedItem(item)"></app-inventory-item>
