@@ -4,7 +4,7 @@ import { DataSource } from 'typeorm';
 import AppDataSource from './dataSource';
 import { Inventory_One } from './entity/inventory_one';
 import { Craftable } from './entity/craftable';
-import userRouter from "./route/UserRoute"
+import userRouter from "./route/userRoute";
 import inventoryoneRouter from './route/inventoryoneroute';
 import inventorytwoRouter from './route/inventorytworoute';
 import inventorythreeRouter from './route/inventorythreeroute';
