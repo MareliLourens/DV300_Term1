@@ -7,8 +7,8 @@ import { AuthenticationComponent } from './components/authentication/authenticat
 import { LocationsComponent } from './components/locations/locations.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { CraftComponentSA } from './components/craft-SA/craft.component';
-import { CraftComponentSK } from './components/craft-SK/craft.component';
-import { CraftComponentJP } from './components/craft-JP/craft.component';
+import { CraftComponentSK } from './components/craft-SK/craft-2.component';
+import { CraftComponentJP } from './components/craft-JP/craft-3.component';
 
 export const routes: Routes = [
     { path: 'landing', component: LandingComponent },
