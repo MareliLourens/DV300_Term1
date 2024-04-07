@@ -16,10 +16,7 @@ export class AppComponent {
   
   constructor(public router: Router) {}
 
-  ngOnInit() {
-    this.router.navigate(['/landing']);
-  }
-
+ 
   
   
 }
