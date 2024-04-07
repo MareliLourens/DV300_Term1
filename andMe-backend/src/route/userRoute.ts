@@ -58,9 +58,6 @@ userRouter.post('/login', async (req, res) => {
     }
 })
 
-
-
-
 export default userRouter
 
 function compare(phone_number: any) {
