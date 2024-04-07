@@ -1,5 +1,5 @@
 .dummy-background {
-    width: calc((100% - 18vh) / 6);
+    width: calc((42vw) / 6);
     height: 17vh;
     border-radius: 10px;
     background: rgba(56, 3, 86, 0.75);
@@ -26,4 +26,10 @@
     justify-content: center;
     color: #F1F1F1;
     font-weight: 400;
+}
+
+.sizing{
+    height: 130px;
+    max-width: 100px;
+    object-fit: contain;
 }
