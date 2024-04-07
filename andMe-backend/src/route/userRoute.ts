@@ -39,6 +39,8 @@ userRouter.post('/login', async (req, res) => {
         if (phone_number && unique_answer) {
             let userRequest = await appDataSource.getRepository(User).findOneBy({ phone_number: phone_number });
 
+            console.log(userRequest)
+
             if (!userRequest) {
                 return res.status(404).json({ message: "No User Found" });
             } else {

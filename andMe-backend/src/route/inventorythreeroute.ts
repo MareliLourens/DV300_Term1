@@ -12,9 +12,9 @@ const appDataSource = AppDataSource
 inventorythreeRouter.get("/", async (req, res) => {
     try {
 
-        const items2 = await appDataSource.getRepository(Inventory_Three).find()
+        const items3 = await appDataSource.getRepository(Inventory_Three).find()
 
-        res.json(items2)
+        res.json(items3)
 
     } catch (error) {
         console.error("Error during Data Source initialization", error)
