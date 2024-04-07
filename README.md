@@ -59,7 +59,7 @@ In the initial brainstorming stage of the project, we took a look at similar web
 
 ### Wireframes:
 
-![landing](./README/wireframes/landing.png)
+![landing](./README/wireframes/Landing.png)
 ![authentication](./README/wireframes/Authentication.png)
 ![locations](./README/wireframes/Locations.png)
 ![inventory_stock](./README/wireframes/Inventory_Stock.png)
