@@ -50,6 +50,8 @@ We worked on a project to develop a typescript full-stack application that simul
 * [Git](https://git-scm.com/downloads)
 * [Node.js](https://nodejs.org/en)
 * [NPM](https://www.npmjs.com/)
+* [Angular](https://angular.io/)
+* [PostgreSQL](https://www.postgresql.org/)
 
 ## Features and Functionality:
 
