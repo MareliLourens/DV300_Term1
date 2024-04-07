@@ -37,9 +37,9 @@
 We worked on a project to develop a typescript full-stack application that simulates how a manufacturing company can keep stock of their inventory and also create new products. One particularly exciting aspect of this endeavor was the opportunity to delve into the code with the endpoint of creating this application for korean pop music company albeit a fictional company.
 
 ### Built with:
-* <a href="https://angular.io/">![Static Badge] ()</a>
-* <a href="https://www.pgadmin.org/">![Static Badge] ()</a>
-* <a href="https://www.typescriptlang.org/">![Static Badge] (https://img.shields.io/badge/Type%20Script-url?style=for-the-badge&logo=typescript&logoColor=white&labelColor=blue&color=blue)</a>
+* <a href="https://angular.io/">![Static Badge](https://img.shields.io/badge/Angular-url?style=for-the-badge&logo=angular&labelColor=red&color=red)</a>
+* <a href="https://www.pgadmin.org/">![Static Badge](https://img.shields.io/badge/pgAdmin-url?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=grey&color=grey)</a>
+* <a href="https://www.typescriptlang.org/">![Static Badge](https://img.shields.io/badge/Type%20Script-url?style=for-the-badge&logo=typescript&logoColor=white&labelColor=blue&color=blue)</a>
 * <a href="https://www.w3schools.com/css/">![Static Badge](https://img.shields.io/badge/Css-url?style=for-the-badge&logo=Cascading%20Style%20Sheets&color=blue)</a>
 * <a href="https://www.w3schools.com/js/">![Static Badge](https://img.shields.io/badge/Javascript-url?style=for-the-badge&logo=JS&color=yellow)</a>
 * <a href="https://github.com/"> ![Static Badge](https://img.shields.io/badge/Github-url?style=for-the-badge&logo=github&color=purple)</a>
