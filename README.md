@@ -99,7 +99,7 @@ Another area where we would like to expand and enhance the project is in making 
 
 ### Mockup Video
 
-https://github.com/MareliLourens/andME_Entertainment/blob/main/README/Promotional_Video.mp4
+https://drive.google.com/file/d/1kChyd5JnhvceB01xj4z28l-jG-1DI-EO/view?usp=sharing
 
 ### Demonstration Video
 
