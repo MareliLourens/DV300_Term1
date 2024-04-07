@@ -99,10 +99,6 @@ Another area where we would like to expand and enhance the project is in making 
 
 https://github.com/MareliLourens/andME_Entertainment/blob/main/README/Promotional_Video.mp4
 
-### Demonstration Video
-
-https://drive.google.com/file/d/12NNw567cPoNrMXdt6fgqneU2oYyVV-bE/view?usp=sharing
-
 
 
 ## Conclusion
