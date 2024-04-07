@@ -11,7 +11,7 @@ import { CraftComponentSK } from './components/craft-SK/craft-2.component';
 import { CraftComponentJP } from './components/craft-JP/craft-3.component';
 
 export const routes: Routes = [
-    { path: 'landing', component: LandingComponent },
+    { path: '', component: LandingComponent },
     { path: 'authentication', component: AuthenticationComponent },
     { path: 'locations', component: LocationsComponent },
     { path: 'about-us', component: AboutUsComponent },
