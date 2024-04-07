@@ -13,10 +13,15 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = '&ME Entertainment';
-
   
   constructor(public router: Router) {}
+
+  ngOnInit() {
+    this.router.navigate(['/landing']);
+  }
 
   
   
 }
+
+

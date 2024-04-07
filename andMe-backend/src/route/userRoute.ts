@@ -39,13 +39,11 @@ userRouter.post('/login', async (req, res) => {
         if (phone_number && unique_answer) {
             let userRequest = await appDataSource.getRepository(User).findOneBy({ phone_number: phone_number });
 
-            console.log(userRequest)
-
             if (!userRequest) {
                 return res.status(404).json({ message: "No User Found" });
             } else {
                 bcrypt.compare(unique_answer, userRequest.unique_answer, (error, result) => {
-                    if (result) { // Corrected condition
+                    if (result) { 
                         userRequest!.unique_answer = ""
                         return res.json(userRequest);
                     } else {
@@ -59,6 +57,9 @@ userRouter.post('/login', async (req, res) => {
         res.status(500).json({ message: error });
     }
 })
+
+
+
 
 export default userRouter
 

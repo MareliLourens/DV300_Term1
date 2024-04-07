@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import { InventoryOneService } from '../../services/inventory-one.service';
 import { Inventory_One } from '../../models/inventory-one.model';
