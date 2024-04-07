@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
+import { InventoryOneService } from '../../services/inventory-one.service';
+import { Inventory_One } from '../../models/inventory-one.model';
 
 
 @Component({
@@ -10,6 +12,57 @@ import {MatCardModule} from '@angular/material/card';
   styleUrl: './locations.component.css'
 })
 export class LocationsComponent {
+
+  constructor (private service: InventoryOneService) {}
+
+  inventory1: Inventory_One[] = [
+    {
+      id: 0,
+      name: "HTML",
+      image: "assets/assests/BE (Deluxe Edition)/CD.png",
+      amount_avaible: 0,
+      main_category: "Album BE",
+    },
+  ]
+
+
+  // Code to try and sum up the totals for each inventory
+  ngOnInit(){
+    this.service.getAllInventory().subscribe((data) => {
+      console.log(data);
+      this.inventory1 = data
+    })
+  }
+
+  totalQuantity = 0
+  totalPrice = 0
+  item = 3
+  selectedInventory?: Inventory_One;
+
+  getItemsTotal(ItemArray: Inventory_One[]){
+    let number = ItemArray
+      .reduce(function (a, b) {
+        return a + b.amount_avaible;
+      }, 0);
+
+      console.log(number)
+
+    // this.selectedInventory = inventory;
+    // console.log(this.selectedInventory)
+  }
+
+  // sum = this.inventory1!.reduce((this.totalQuantity, this.inventory1!.amount_avaible) ; this.totalQuantity + this.selectedInventory!.amount_avaible)
+
+  // getTotalItem() {
+  //   // this.inventory1.reduce((acc, titem) => {
+  //   // })
+  //   this.item = this.totalQuantity += this.selectedInventory!.amount_avaible
+
+  //   console.log(this.item)
+    
+  // }
+
+
 
 
 }
