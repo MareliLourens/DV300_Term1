@@ -37,7 +37,11 @@
 We worked on a project to develop a typescript full-stack application that simulates how a manufacturing company can keep stock of their inventory and also create new products. One particularly exciting aspect of this endeavor was the opportunity to delve into the code with the endpoint of creating this application for korean pop music company albeit a fictional company.
 
 ### Built with:
-For this project, we utilized React and Node.js, as well as advanced Javascript and Axios. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+* <a href="https://www.w3schools.com/css/">![Static Badge](https://img.shields.io/badge/Css-url?style=for-the-badge&logo=Cascading%20Style%20Sheets&color=blue)</a>
+* <a href="https://www.w3schools.com/js/">![Static Badge](https://img.shields.io/badge/Javascript-url?style=for-the-badge&logo=JS&color=yellow)</a>
+* <a href="https://github.com/"> ![Static Badge](https://img.shields.io/badge/Github-url?style=for-the-badge&logo=github&color=purple)</a>
+* <a href="https://code.visualstudio.com/"> ![Static Badge](https://img.shields.io/badge/visual%20studio-url?style=for-the-badge&logo=visual%20studio&logoColor=blue&color=black&link=https%3A%2F%2Fcode.visualstudio.com%2F)</a>
 
 ## Getting Started:
 
