@@ -1,5 +1,3 @@
-<!-- <img src="assets/assests/Images/Authentication_BG.jpg" class="background_img"  width="1440" height="773"> -->
-
 <div class="inventory-stock">
     <div class="main">
         <mat-card class="example-card">
@@ -19,7 +17,7 @@
                                 <option value="SK">+82</option>
                             </select>
                             <input class="Phone_Num" type="number" placeholder="Phone Number" formControlName="phone_number">
-                            <button class="Phone_Sub" (click)="revealQuestion()">Reveal Question</button>
+                            <button class="Phone_Sub">Send OTP</button>
                         </div>
                     </mat-card-subtitle>
 
@@ -28,11 +26,12 @@
                         <h3 class="subtitle3">What is the answer to your Question?</h3>
                     </mat-card-title>
                     <mat-card-subtitle>
-                        <input class="pin" type="text" placeholder="Your Answer" formControlName="unique_answer">
+                        <input class="pin" type="text" placeholder="Pin" formControlName="unique_answer">
                     </mat-card-subtitle>
                     <br>
                     <br>
-                    
+                    <input type="checkbox" value="">
+                    <label for="vehicle1">Remeber Me</label>
                     <br>
                     <br>
                     <br>
