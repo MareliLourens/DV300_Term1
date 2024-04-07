@@ -19,20 +19,22 @@
                                 <option value="SK">+82</option>
                             </select>
                             <input class="Phone_Num" type="number" placeholder="Phone Number" formControlName="phone_number">
-                            <button class="Phone_Sub" (click)="revealQuestion()">Reveal Question</button>
+                            <button class="Phone_Sub">Send OTP</button>
                         </div>
                     </mat-card-subtitle>
 
                     <br>
                     <mat-card-title class="box">
-                        <h3 class="subtitle3">{{ uniqueQuestion }}</h3>
+                        <h3 class="subtitle3">OTP Pin</h3>
+                        <h5 class="subtitle2">Din't recieve an OTP?</h5>
                     </mat-card-title>
                     <mat-card-subtitle>
-                        <input class="pin" type="text" placeholder="Your Answer" formControlName="unique_answer">
+                        <input class="pin" type="text" placeholder="Pin" formControlName="unique_answer">
                     </mat-card-subtitle>
                     <br>
                     <br>
-                    
+                    <input type="checkbox" value="">
+                    <label for="vehicle1">Remeber Me</label>
                     <br>
                     <br>
                     <br>
