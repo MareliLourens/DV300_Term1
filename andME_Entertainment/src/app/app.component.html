@@ -14,20 +14,15 @@
 </nav> -->
 <div class="top">
   <nav class="nav-background">
-    <!-- Check if the current route is not '/authentication' -->
-    <a *ngIf="router.url !== '/authentication'" routerLink="/landing" routerLinkActive="active" ariaCurrentWhenActive="page">
-      
-    </a>
-    <img class="logo" src="../assets/assests/Images/Logo.svg">
-    <!-- Remaining navigation links -->
+    <a routerLink="/landing" routerLinkActive="active" ariaCurrentWhenActive="page"><img class="logo" src="../assets/assests/Images/Logo.svg"></a>
     <a class="nav-text" routerLink="/locations" routerLinkActive="active" ariaCurrentWhenActive="page">Locations</a>
     <div class="nav-right">
       <a class="nav-text" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About</a>
       <a class="nav-text" routerLink="/authentication" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
     </div>
   </nav>
+  
 </div>
-
 
 
 
