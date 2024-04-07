@@ -94,7 +94,7 @@ Another area where we would like to expand and enhance the project is in making 
 ### Mockup Video
 
 
-https://github.com/MareliLourens/OpenFlow/assets/109971278/8f61f450-b44c-4f12-83a9-c5c9435bf0a6
+F:\Open Window\DV 300\Term 1\andME_Entertainment\README\Promotional_Video.mp4
 
 
 ### Demonstration Video
