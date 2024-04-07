@@ -1,7 +1,7 @@
 ## <p align="center" style="text-decoration: none !important;padding:0;margin:0;">Mareli Lourens, Mariné du Plessis <br> 221119, 221326, <br> Interactive Development 300 - Term 1</p>
 
 <p align="center">
-  <img src="Icon.png" height="75" style="display: block; margin: 0 auto;">
+  <img src="./README/Icon.png" height="75" style="display: block; margin: 0 auto;">
 </p>
 
 ## <p align="center" style="text-decoration: none !important;padding:0;margin:0;">Typescript Full-stack Development</p>
