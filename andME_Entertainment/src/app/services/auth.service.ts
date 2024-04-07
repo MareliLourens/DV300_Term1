@@ -10,7 +10,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  private loginUrl = "http://localhost:3000/users";
+  private loginUrl = "http://localhost:3000/users/login";
   private questionUrl = "http://localhost:3000/users"; // Assuming you have an endpoint to fetch the unique question
 
   loginUser(phone_number: string, unique_answer: string): Observable<boolean> {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import { InventoryOneService } from '../../services/inventory-one.service';
 import { Inventory_One } from '../../models/inventory-one.model';
@@ -15,7 +15,6 @@ export class LocationsComponent {
 
   constructor(private service: InventoryOneService) {}
 
-  
   inventory: Inventory_One[] = [
     {
       id: 0,
@@ -26,10 +25,6 @@ export class LocationsComponent {
     },
   ] 
 
-  sum = 0
-
-  number = this.inventory.forEach(a => this.sum += a.amount_avaible);
-  
   ngOnInit(){
     this.service.getAllInventory().subscribe((data) => {
       console.log(data);
@@ -37,22 +32,5 @@ export class LocationsComponent {
     })
   }
 
-  // totalNumber = 0
-
-  // selectedInventory?: Inventory_One;
-
-  // setSelectedItem(inventory: Inventory_One) {
-
-  //   this.totalNumber = this.selectedInventory!.amount_avaible
-
-  //   console.log(this.totalNumber)
-
-  // }
-
   
-
-  
-  
-
-
 }
