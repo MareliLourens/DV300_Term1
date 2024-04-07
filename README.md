@@ -93,9 +93,7 @@ Another area where we would like to expand and enhance the project is in making 
 
 ### Mockup Video
 
-
-F:\Open Window\DV 300\Term 1\andME_Entertainment\README\Promotional_Video.mp4
-
+https://github.com/MareliLourens/andME_Entertainment/blob/main/README/Promotional_Video.mp4
 
 ### Demonstration Video
 
