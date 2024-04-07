@@ -59,7 +59,7 @@ In the initial brainstorming stage of the project, we took a look at similar web
 
 ### Wireframes:
 
-![landing](./README/wireframes/landing.png)
+![landing](./README/wireframes/Landing.png)
 ![authentication](./README/wireframes/Authentication.png)
 ![locations](./README/wireframes/Locations.png)
 ![inventory_stock](./README/wireframes/Inventory_Stock.png)
@@ -93,9 +93,7 @@ Another area where we would like to expand and enhance the project is in making 
 
 ### Mockup Video
 
-
-https://github.com/MareliLourens/OpenFlow/assets/109971278/8f61f450-b44c-4f12-83a9-c5c9435bf0a6
-
+https://github.com/MareliLourens/andME_Entertainment/blob/main/README/Promotional_Video.mp4
 
 ### Demonstration Video
 
