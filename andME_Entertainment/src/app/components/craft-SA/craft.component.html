@@ -19,7 +19,7 @@
         @if(selectedCraftable) {
             <div class="right">
                 <h1 class="title-right">{{selectedCraftable.name}}</h1>
-                <img [src]="selectedCraftable.image" class="sizing">
+                <img [src]="selectedCraftable.image" height="170px">
                 <div style="width: 100%;">
                     <div class="bottom">
                         <h1 class="title-bottom">Crafting Materials</h1>
@@ -36,7 +36,7 @@
                         @for (ingredient of selectedCraftable.ingredients; track $index) {
                             <div class="dummy-background-bottom">
                                 <div class="amount-background" [style]="ingredient.inventory.amount_avaible >= ingredient.amount ? 'color: white' : 'color: red'"><b>{{ingredient.inventory.name}}</b> - {{ingredient.inventory.amount_avaible}}</div>
-                                <img [src]="ingredient.inventory.image" height="100px">
+                                <img [src]="ingredient.inventory.image" class="sizing">
                             </div>
                             <img src="assets/assests/Images/plus.png" class="img">
                         } 
