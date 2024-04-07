@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 
+
 @Component({
   selector: 'app-locations',
   standalone: true,
@@ -9,5 +10,6 @@ import {MatCardModule} from '@angular/material/card';
   styleUrl: './locations.component.css'
 })
 export class LocationsComponent {
+
 
 }

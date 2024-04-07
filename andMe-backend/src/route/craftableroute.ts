@@ -55,7 +55,7 @@ craftableRouter.put("/:id/craft", async (req, res) => {
       console.log("something went wrong" + error);
       return res.status(500).json({ message: error });
     }
-  });
+});
 
   const updateInventoryAmount = async (Ingredients: Ingredients[]) => {
     // this is a try/catch loop
@@ -80,5 +80,4 @@ craftableRouter.put("/:id/craft", async (req, res) => {
       throw error;
     }
   }
-
 export default craftableRouter;
