@@ -31,7 +31,7 @@
 ## About the project:
 
 ### Product mockup:
-![Mockup](README/Product_Mockup.png)
+![Mockup](./README/Product_Mockup.png)
 
 ### Project description:
 We worked on a project to develop a typescript full-stack application that simulates how a manufacturing company can keep stock of their inventory and also create new products. One particularly exciting aspect of this endeavor was the opportunity to delve into the code with the endpoint of creating this application for korean pop music company albeit a fictional company.
@@ -59,12 +59,12 @@ In the initial brainstorming stage of the project, we took a look at similar web
 
 ### Wireframes:
 
-![landing](./wireframes/landing.png)
-![authentication](./wireframes/Authentication.png)
-![locations](./wireframes/Locations.png)
-![inventory_stock](./wireframes/Inventory_Stock.png)
-![craft](./wireframes/Craft.png)
-![about_us](./wireframes/About_Us.png)
+![landing](./README/wireframes/landing.png)
+![authentication](./README/wireframes/Authentication.png)
+![locations](./README/wireframes/Locations.png)
+![inventory_stock](./README/wireframes/Inventory_Stock.png)
+![craft](./README/wireframes/Craft.png)
+![about_us](./README/wireframes/About_Us.png)
 
 ## Development Process
 
