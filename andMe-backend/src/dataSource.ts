@@ -6,7 +6,7 @@ const AppDataSource = new DataSource(
         "host": "localhost",
         "port": 5432,
         "username": "postgres",
-        "password": "2024",
+        "password": "6131",
         "database": "and_me_entertainement",
         "entities": ["src/entity/*.ts"],
         "logging": true,
@@ -22,4 +22,4 @@ AppDataSource.initialize()
         console.error("Error during Data Source initialization", err)
     })
 
-export default AppDataSource;
+export default AppDataSource
