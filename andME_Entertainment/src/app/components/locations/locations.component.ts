@@ -21,6 +21,10 @@ import { CraftableThreeService } from '../../services/craftable-three.service';
 })
 export class LocationsComponent {
 
+  totalInventory1: number = 0;
+  totalInventory2: number = 0;
+  totalInventory3: number = 0;
+
   constructor (
     private service: InventoryOneService, 
     private servicetwo: InventoryTwoService, 
@@ -33,16 +37,18 @@ export class LocationsComponent {
   ngOnInit(){
     this.service.getAllInventory().subscribe((data) => {
       console.log(data);
-      this.inventory1 = data
+      this.inventory1 = data;
+      this.totalInventory1 = this.getItemsTotal(this.inventory1);
     });
     this.servicetwo.getAllInventoryTwo().subscribe((data) => {
-      console.log("...")
       console.log(data);
-      this.inventory2 = data
+      this.inventory2 = data;
+      this.totalInventory2 = this.getItemsTotaltwo(this.inventory2);
     });
     this.servicethree.getAllInventoryThree().subscribe((data) => {
       console.log(data);
-      this.inventory3 = data
+      this.inventory3 = data;
+      this.totalInventory3 = this.getItemsTotalthree(this.inventory3);
     });
     this.servicefour.getAllCraftables().subscribe((data) => {
       console.log(data);
@@ -79,17 +85,20 @@ export class LocationsComponent {
     return Math.max(...this.inventory1.map(item => item.amount_avaible));
   }
 
-  getItemsTotal(ItemArray: Inventory_One[]){
-    let number = ItemArray
-      .reduce(function (a, b) {
-        return a + b.amount_avaible;
-      }, 0);
+  getItemsTotal(ItemArray: Inventory_One[]) {
+    console.log(ItemArray.length);
 
-      console.log(number)
+    let total = 0;
 
+    // For loop to iterate through each item in the array
+    for (let i = 0; i < ItemArray.length; i++) {
+      total += ItemArray[i].amount_avaible;
+    }
 
-    // this.selectedInventory = inventory;
-    // console.log(this.selectedInventory)
+    console.log(total);
+
+    // Returning the total amount_available
+    return total;
   }
 
   // Code to try and sum all data for inventory two
@@ -113,6 +122,22 @@ export class LocationsComponent {
     return Math.max(...this.inventory2.map(item => item.amount_avaible));
   }
 
+  getItemsTotaltwo(ItemArray: Inventory_Two[]) {
+    console.log(ItemArray.length);
+
+    let total = 0;
+
+    // For loop to iterate through each item in the array
+    for (let i = 0; i < ItemArray.length; i++) {
+      total += ItemArray[i].amount_avaible;
+    }
+
+    console.log(total);
+
+    // Returning the total amount_available
+    return total;
+  }
+
   // Code to try and sum all data for inventory three
   inventory3: Inventory_Three[] = [
 
@@ -132,6 +157,22 @@ export class LocationsComponent {
 
   get maxthree(){
     return Math.max(...this.inventory3.map(item => item.amount_avaible));
+  }
+
+  getItemsTotalthree(ItemArray: Inventory_Three[]) {
+    console.log(ItemArray.length);
+
+    let total = 0;
+
+    // For loop to iterate through each item in the array
+    for (let i = 0; i < ItemArray.length; i++) {
+      total += ItemArray[i].amount_avaible;
+    }
+
+    console.log(total);
+
+    // Returning the total amount_available
+    return total;
   }
 
 
