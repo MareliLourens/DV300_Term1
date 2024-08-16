@@ -5,6 +5,11 @@ import { Inventory_One } from '../../models/inventory-one.model';
 import { CraftableService } from '../../services/craftable.service';
 import { Craftable } from '../../models/craftable.model';
 import { Inventory_Two } from '../../models/inventory-two.model';
+import { InventoryTwoService } from '../../services/inventory-two.service';
+import { Inventory_Three } from '../../models/inventory-three.model';
+import { InventoryThreeService } from '../../services/inventory-three.service';
+import { CraftableTwoService } from '../../services/craftable-two.service';
+import { CraftableThreeService } from '../../services/craftable-three.service';
 
 
 @Component({
@@ -16,36 +21,64 @@ import { Inventory_Two } from '../../models/inventory-two.model';
 })
 export class LocationsComponent {
 
-  constructor (private service: InventoryOneService) {}
+  constructor (
+    private service: InventoryOneService, 
+    private servicetwo: InventoryTwoService, 
+    private servicethree: InventoryThreeService,
+    private servicefour: CraftableService,
+    private servicefive: CraftableTwoService,
+    private servicesix: CraftableThreeService,
+  ) {}
 
-  inventory1: Inventory_One[] = [
-
-  ]
-
-  // Code to try and sum up the totals for each inventory
   ngOnInit(){
     this.service.getAllInventory().subscribe((data) => {
       console.log(data);
       this.inventory1 = data
     });
+    this.servicetwo.getAllInventoryTwo().subscribe((data) => {
+      console.log("...")
+      console.log(data);
+      this.inventory2 = data
+    });
+    this.servicethree.getAllInventoryThree().subscribe((data) => {
+      console.log(data);
+      this.inventory3 = data
+    });
+    this.servicefour.getAllCraftables().subscribe((data) => {
+      console.log(data);
+      this.craftable1 = data
+    });
+    this.servicefive.getAllCraftablesTwo().subscribe((data) => {
+      console.log(data);
+      this.craftable2 = data
+    });
+    this.servicesix.getAllCraftablesThree().subscribe((data) => {
+      console.log(data);
+      this.craftable3 = data
+    });
   }
 
-  selectedInventory?: Inventory_One;
+  // Code to try and sum all data for inventory one
+  inventory1: Inventory_One[] = [
+
+  ]
+
+  craftable1: Craftable[] = [
+
+  ]
 
   get rows(): number {
     return this.inventory1.length;
   }
 
-  // get rows2(): number {
-  //   return this.inventory2.length;
-  // }
-
-  // Get max value of an item in inventory
-  get max(){
-    return Math.max(this.selectedInventory!.amount_avaible)
+  get rowscraft(): number {
+    return this.craftable1.length;
   }
 
-  
+  get max(){
+    return Math.max(...this.inventory1.map(item => item.amount_avaible));
+  }
+
   getItemsTotal(ItemArray: Inventory_One[]){
     let number = ItemArray
       .reduce(function (a, b) {
@@ -59,21 +92,47 @@ export class LocationsComponent {
     // console.log(this.selectedInventory)
   }
 
+  // Code to try and sum all data for inventory two
+  inventory2: Inventory_Two[] = [
 
-  // totalQuantity = 0
-  // totalPrice = 0
-  // sum = this.inventory1!.reduce((this.totalQuantity, this.inventory1!.amount_avaible) ; this.totalQuantity + this.selectedInventory!.amount_avaible)
+  ]
 
-  // getTotalItem() {
-  //   // this.inventory1.reduce((acc, titem) => {
-  //   // })
-  //   this.item = this.totalQuantity += this.selectedInventory!.amount_avaible
+  craftable2: Craftable[] = [
 
-  //   console.log(this.item)
-    
-  // }
+  ]
 
+  get rowstwo(): number {
+    return this.inventory2.length;
+  }
 
+  get rowscrafttwo(): number {
+    return this.craftable2.length;
+  }
+
+  get maxtwo(){
+    return Math.max(...this.inventory2.map(item => item.amount_avaible));
+  }
+
+  // Code to try and sum all data for inventory three
+  inventory3: Inventory_Three[] = [
+
+  ]
+
+  craftable3: Craftable[] = [
+
+  ]
+
+  get rowsthree(): number {
+    return this.inventory3.length;
+  }
+
+  get rowscraftthree(): number {
+    return this.craftable3.length;
+  }
+
+  get maxthree(){
+    return Math.max(...this.inventory3.map(item => item.amount_avaible));
+  }
 
 
 }
