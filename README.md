@@ -37,7 +37,6 @@
 We worked on a project to develop a typescript full-stack application that simulates how a manufacturing company can keep stock of their inventory and also create new products. One particularly exciting aspect of this endeavor was the opportunity to delve into the code with the endpoint of creating this application for korean pop music company albeit a fictional company.
 
 ### Built with:
-
 * <a href="https://angular.io/">![Static Badge](https://img.shields.io/badge/Angular-url?style=for-the-badge&logo=angular&labelColor=red&color=red)</a>
 * <a href="https://www.pgadmin.org/">![Static Badge](https://img.shields.io/badge/pgAdmin-url?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=grey&color=grey)</a>
 * <a href="https://www.typescriptlang.org/">![Static Badge](https://img.shields.io/badge/Type%20Script-url?style=for-the-badge&logo=typescript&logoColor=white&labelColor=blue&color=blue)</a>
@@ -102,7 +101,7 @@ Another area where we would like to expand and enhance the project is in making 
 
 ### Mockup Video
 
-https://github.com/MareliLourens/andME_Entertainment/blob/main/README/Promotional_Video.mp4
+https://drive.google.com/file/d/1kChyd5JnhvceB01xj4z28l-jG-1DI-EO/view?usp=sharing
 
 
 

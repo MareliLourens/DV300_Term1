@@ -35,8 +35,8 @@
                     <div class="bottom-item-background">
                         @for (ingredientthree of selectedCraftableThree.ingredientsthree; track $index) {
                             <div class="dummy-background-bottom">
-                                <div class="amount-background" [style]="ingredientthree.inventorythree.amount_avaible >= ingredientthree.amount ? 'color: white' : 'color: red'"><b>{{ingredientthree.inventorythree.name}}</b> - {{ingredientthree.inventorythree.amount_avaible}}</div>
-                                <img [src]="ingredientthree.inventorythree.image" height="100px">
+                                <div class="amount-background1" [style]="ingredientthree.inventorythree.amount_avaible >= ingredientthree.amount ? 'color: white' : 'color: red'"><b>{{ingredientthree.inventorythree.name}}</b> - {{ingredientthree.inventorythree.amount_avaible}}</div>
+                                <img [src]="ingredientthree.inventorythree.image" class="sizing">
                             </div>
                             <img src="assets/assests/Images/plus.png" class="img">
                         } 

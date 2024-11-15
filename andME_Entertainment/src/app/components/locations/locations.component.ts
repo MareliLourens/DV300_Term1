@@ -5,6 +5,11 @@ import { Inventory_One } from '../../models/inventory-one.model';
 import { CraftableService } from '../../services/craftable.service';
 import { Craftable } from '../../models/craftable.model';
 import { Inventory_Two } from '../../models/inventory-two.model';
+import { InventoryTwoService } from '../../services/inventory-two.service';
+import { Inventory_Three } from '../../models/inventory-three.model';
+import { InventoryThreeService } from '../../services/inventory-three.service';
+import { CraftableTwoService } from '../../services/craftable-two.service';
+import { CraftableThreeService } from '../../services/craftable-three.service';
 
 
 @Component({
@@ -16,64 +21,159 @@ import { Inventory_Two } from '../../models/inventory-two.model';
 })
 export class LocationsComponent {
 
-  constructor (private service: InventoryOneService) {}
+  totalInventory1: number = 0;
+  totalInventory2: number = 0;
+  totalInventory3: number = 0;
 
+  constructor (
+    private service: InventoryOneService, 
+    private servicetwo: InventoryTwoService, 
+    private servicethree: InventoryThreeService,
+    private servicefour: CraftableService,
+    private servicefive: CraftableTwoService,
+    private servicesix: CraftableThreeService,
+  ) {}
+
+  ngOnInit(){
+    this.service.getAllInventory().subscribe((data) => {
+      console.log(data);
+      this.inventory1 = data;
+      this.totalInventory1 = this.getItemsTotal(this.inventory1);
+    });
+    this.servicetwo.getAllInventoryTwo().subscribe((data) => {
+      console.log(data);
+      this.inventory2 = data;
+      this.totalInventory2 = this.getItemsTotaltwo(this.inventory2);
+    });
+    this.servicethree.getAllInventoryThree().subscribe((data) => {
+      console.log(data);
+      this.inventory3 = data;
+      this.totalInventory3 = this.getItemsTotalthree(this.inventory3);
+    });
+    this.servicefour.getAllCraftables().subscribe((data) => {
+      console.log(data);
+      this.craftable1 = data
+    });
+    this.servicefive.getAllCraftablesTwo().subscribe((data) => {
+      console.log(data);
+      this.craftable2 = data
+    });
+    this.servicesix.getAllCraftablesThree().subscribe((data) => {
+      console.log(data);
+      this.craftable3 = data
+    });
+  }
+
+  // Code to try and sum all data for inventory one
   inventory1: Inventory_One[] = [
 
   ]
 
-  // Code to try and sum up the totals for each inventory
-  ngOnInit(){
-    this.service.getAllInventory().subscribe((data) => {
-      console.log(data);
-      this.inventory1 = data
-    });
-  }
+  craftable1: Craftable[] = [
 
-  selectedInventory?: Inventory_One;
+  ]
 
   get rows(): number {
     return this.inventory1.length;
   }
 
-  // get rows2(): number {
-  //   return this.inventory2.length;
-  // }
+  get rowscraft(): number {
+    return this.craftable1.length;
+  }
 
-  // Get max value of an item in inventory
   get max(){
-    return Math.max(this.selectedInventory!.amount_avaible)
+    return Math.max(...this.inventory1.map(item => item.amount_avaible));
   }
 
-  
-  getItemsTotal(ItemArray: Inventory_One[]){
-    let number = ItemArray
-      .reduce(function (a, b) {
-        return a + b.amount_avaible;
-      }, 0);
+  getItemsTotal(ItemArray: Inventory_One[]) {
+    console.log(ItemArray.length);
 
-      console.log(number)
+    let total = 0;
 
+    // For loop to iterate through each item in the array
+    for (let i = 0; i < ItemArray.length; i++) {
+      total += ItemArray[i].amount_avaible;
+    }
 
-    // this.selectedInventory = inventory;
-    // console.log(this.selectedInventory)
+    console.log(total);
+
+    // Returning the total amount_available
+    return total;
   }
 
+  // Code to try and sum all data for inventory two
+  inventory2: Inventory_Two[] = [
 
-  // totalQuantity = 0
-  // totalPrice = 0
-  // sum = this.inventory1!.reduce((this.totalQuantity, this.inventory1!.amount_avaible) ; this.totalQuantity + this.selectedInventory!.amount_avaible)
+  ]
 
-  // getTotalItem() {
-  //   // this.inventory1.reduce((acc, titem) => {
-  //   // })
-  //   this.item = this.totalQuantity += this.selectedInventory!.amount_avaible
+  craftable2: Craftable[] = [
 
-  //   console.log(this.item)
-    
-  // }
+  ]
 
+  get rowstwo(): number {
+    return this.inventory2.length;
+  }
 
+  get rowscrafttwo(): number {
+    return this.craftable2.length;
+  }
+
+  get maxtwo(){
+    return Math.max(...this.inventory2.map(item => item.amount_avaible));
+  }
+
+  getItemsTotaltwo(ItemArray: Inventory_Two[]) {
+    console.log(ItemArray.length);
+
+    let total = 0;
+
+    // For loop to iterate through each item in the array
+    for (let i = 0; i < ItemArray.length; i++) {
+      total += ItemArray[i].amount_avaible;
+    }
+
+    console.log(total);
+
+    // Returning the total amount_available
+    return total;
+  }
+
+  // Code to try and sum all data for inventory three
+  inventory3: Inventory_Three[] = [
+
+  ]
+
+  craftable3: Craftable[] = [
+
+  ]
+
+  get rowsthree(): number {
+    return this.inventory3.length;
+  }
+
+  get rowscraftthree(): number {
+    return this.craftable3.length;
+  }
+
+  get maxthree(){
+    return Math.max(...this.inventory3.map(item => item.amount_avaible));
+  }
+
+  getItemsTotalthree(ItemArray: Inventory_Three[]) {
+    console.log(ItemArray.length);
+
+    let total = 0;
+
+    // For loop to iterate through each item in the array
+    for (let i = 0; i < ItemArray.length; i++) {
+      total += ItemArray[i].amount_avaible;
+    }
+
+    console.log(total);
+
+    // Returning the total amount_available
+    return total;
+  }
 
 
 }
